@@ -1,0 +1,23 @@
+question,expected_intent
+"Good evening",greeting
+"See you tomorrow",goodbye
+"I really appreciate this",thanks
+"Share some tips for staying healthy",general_health
+"Can you explain elevated body temperature?",fever
+"What should I know about head pain?",headache
+"Why does a person keep coughing?",cough
+"How do people catch a cold?",common_cold
+"What helps maintain a regular sleep routine?",healthy_sleep
+"Which foods make up a varied diet?",nutrition
+"How does the body use water?",hydration
+"How does walking benefit health?",exercise
+"What are some ways to handle everyday pressure?",stress
+"How do I keep my hands clean?",hygiene
+"How does the stomach process food?",digestion
+"What happens during an allergic reaction?",allergies
+"What supports emotional wellbeing?",mental_wellness
+"Can you explain the meaning of first aid?",first_aid
+"How do I prepare for a medical appointment?",doctor_consultation
+"Where can I get urgent medical assistance?",emergency
+"Tell me about automobile engines",unknown
+"Who won the latest football match?",unknown

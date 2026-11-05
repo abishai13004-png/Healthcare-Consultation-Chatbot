@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Healthcare AI chatbot providing general healthcare and wellness information.">
+
+    <title>HealthCare AI - Healthcare Consultation Chatbot</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         MAIN APPLICATION
+    ====================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="logo">✚</div>
+
+                <div>
+
+                    <h1>HealthCare AI</h1>
+
+                    <p>
+                        Your Personal Health Information Assistant
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-status">
+
+                <span class="status-dot"></span>
+
+                <span>Assistant Available</span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             MAIN CHAT CONTAINER
+        ====================================== -->
+
+        <main class="chat-container">
+
+
+            <!-- =====================================
+                 WELCOME SECTION
+            ====================================== -->
+
+            <section class="welcome-section">
+
+                <div class="welcome-icon">✚</div>
+
+                <h2>Hello! Welcome to HealthCare AI</h2>
+
+                <p>
+
+                    I am your healthcare information assistant.
+
+                    Ask me general questions about health,
+                    nutrition, fitness and wellness.
+
+                </p>
+
+            </section>
+
+
+            <!-- =====================================
+                 QUICK QUESTIONS
+            ====================================== -->
+
+            <section class="quick-section">
+
+                <h3>How can I help you today?</h3>
+
+                <div class="quick-buttons">
+
+                    <button
+                        class="quick-btn"
+                        type="button"
+                        data-question="What is a balanced diet?">
+
+                        🥗 Balanced Diet
+
+                    </button>
+
+
+                    <button
+                        class="quick-btn"
+                        type="button"
+                        data-question="Why is sleep important?">
+
+                        😴 Healthy Sleep
+
+                    </button>
+
+
+                    <button
+                        class="quick-btn"
+                        type="button"
+                        data-question="Why is exercise important?">
+
+                        🏃 Exercise
+
+                    </button>
+
+
+                    <button
+                        class="quick-btn"
+                        type="button"
+                        data-question="How can I manage stress?">
+
+                        🧘 Stress Management
+
+                    </button>
+
+
+                    <button
+                        class="quick-btn"
+                        type="button"
+                        data-question="How can I maintain good hygiene?">
+
+                        🧼 Personal Hygiene
+
+                    </button>
+
+
+                    <button
+                        class="quick-btn"
+                        type="button"
+                        data-question="When should I consult a doctor?">
+
+                        🩺 Doctor Consultation
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 CHAT MESSAGES
+            ====================================== -->
+
+            <section
+                class="chat-box"
+                id="chatBox"
+                aria-live="polite"
+                aria-label="Chat conversation">
+
+
+                <!-- INITIAL BOT MESSAGE -->
+
+                <div class="message bot-message">
+
+                    <div class="avatar">✚</div>
+
+                    <div class="message-content">
+
+                        <span class="sender">
+                            HealthCare AI
+                        </span>
+
+                        <div class="bubble">
+
+                            Hello! Welcome to HealthCare AI.
+
+                            You can ask me general healthcare
+                            and wellness questions.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGES WILL BE ADDED BY JAVASCRIPT -->
+
+            </section>
+
+
+            <!-- =====================================
+                 TYPING INDICATOR
+            ====================================== -->
+
+            <div
+                class="typing-indicator"
+                id="typingIndicator"
+                hidden>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+                <small>
+                    HealthCare AI is typing...
+                </small>
+
+            </div>
+
+
+            <!-- =====================================
+                 INPUT SECTION
+            ====================================== -->
+
+            <section class="input-section">
+
+                <form id="chatForm">
+
+                    <input
+                        type="text"
+                        id="userInput"
+                        name="message"
+                        placeholder="Type your health-related question..."
+                        autocomplete="off"
+                        maxlength="1000"
+                        aria-label="Enter your healthcare question"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        id="sendButton">
+
+                        Send ➤
+
+                    </button>
+
+                </form>
+
+
+                <!-- CLEAR CHAT BUTTON -->
+
+                <button
+                    id="clearChat"
+                    class="clear-button"
+                    type="button">
+
+                    🗑 Clear Conversation
+
+                </button>
+
+            </section>
+
+
+            <!-- =====================================
+                 MEDICAL DISCLAIMER
+            ====================================== -->
+
+            <footer class="disclaimer">
+
+                <strong>Medical Disclaimer:</strong>
+
+                This chatbot provides general educational
+                health information only.
+
+                It does not provide medical diagnosis or
+                treatment and cannot replace a qualified
+                healthcare professional.
+
+                For emergencies, contact emergency services
+                immediately.
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================
+         JAVASCRIPT FILE
+    ====================================== -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

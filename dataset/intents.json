@@ -1,0 +1,265 @@
+
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Hey there",
+        "Good morning",
+        "Good afternoon",
+        "Can you help me",
+        "I need some health information",
+        "Is anyone there?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "See you later",
+        "Talk to you later",
+        "I am leaving",
+        "Have a nice day",
+        "That is all for now",
+        "End this conversation"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "Thanks for your help",
+        "That was helpful",
+        "I appreciate your help",
+        "Thank you so much",
+        "Many thanks",
+        "You helped me"
+      ]
+    },
+    {
+      "tag": "general_health",
+      "patterns": [
+        "How can I stay healthy",
+        "What is good health",
+        "How do I maintain good health",
+        "Give me general health tips",
+        "How can I improve my wellbeing",
+        "What are healthy habits",
+        "How can I take care of my health",
+        "Tell me about a healthy lifestyle"
+      ]
+    },
+    {
+      "tag": "fever",
+      "patterns": [
+        "What is a fever",
+        "Tell me about fever",
+        "What causes a fever",
+        "Why does body temperature increase",
+        "What are common signs of fever",
+        "I want to learn about fever",
+        "Explain fever",
+        "What should I know about high temperature"
+      ]
+    },
+    {
+      "tag": "headache",
+      "patterns": [
+        "What is a headache",
+        "Tell me about headaches",
+        "What are common causes of headaches",
+        "Why do people get headaches",
+        "Explain headache information",
+        "What are different types of headaches",
+        "I want information about head pain",
+        "When should a headache be checked"
+      ]
+    },
+    {
+      "tag": "cough",
+      "patterns": [
+        "What is a cough",
+        "Why do people cough",
+        "Tell me about coughing",
+        "What causes a cough",
+        "Explain common cough information",
+        "What are common cough symptoms",
+        "I want to learn about cough",
+        "When should a cough be checked"
+      ]
+    },
+    {
+      "tag": "common_cold",
+      "patterns": [
+        "What is the common cold",
+        "Tell me about a cold",
+        "What causes common cold",
+        "What are cold symptoms",
+        "How does a common cold spread",
+        "Explain common cold",
+        "How can I prevent catching a cold",
+        "I want information about colds"
+      ]
+    },
+    {
+      "tag": "healthy_sleep",
+      "patterns": [
+        "Why is sleep important",
+        "How can I sleep better",
+        "What are healthy sleeping habits",
+        "How much sleep do people need",
+        "How can I improve my sleep schedule",
+        "Tell me about sleep health",
+        "Why do we need enough sleep",
+        "What is good sleep hygiene"
+      ]
+    },
+    {
+      "tag": "nutrition",
+      "patterns": [
+        "What is a balanced diet",
+        "How can I eat healthy",
+        "What foods are nutritious",
+        "Explain healthy eating",
+        "What is good nutrition",
+        "Why are fruits and vegetables important",
+        "Tell me about a healthy diet",
+        "What are the benefits of nutritious food"
+      ]
+    },
+    {
+      "tag": "hydration",
+      "patterns": [
+        "Why is drinking water important",
+        "What is hydration",
+        "Why does the body need water",
+        "Tell me about dehydration",
+        "What are the benefits of drinking water",
+        "How can I stay hydrated",
+        "What does hydration mean",
+        "Why should we drink enough water"
+      ]
+    },
+    {
+      "tag": "exercise",
+      "patterns": [
+        "Why is exercise important",
+        "What are the benefits of exercise",
+        "Tell me about physical activity",
+        "Why should people exercise",
+        "What is fitness",
+        "How does exercise support health",
+        "What are examples of physical activity",
+        "Explain the importance of exercise"
+      ]
+    },
+    {
+      "tag": "stress",
+      "patterns": [
+        "What is stress",
+        "How can I manage stress",
+        "Tell me about stress management",
+        "What causes stress",
+        "How can relaxation help",
+        "What are healthy ways to manage stress",
+        "Why do people experience stress",
+        "Explain stress management"
+      ]
+    },
+    {
+      "tag": "hygiene",
+      "patterns": [
+        "What is personal hygiene",
+        "How can I maintain good hygiene",
+        "Why is handwashing important",
+        "Tell me about personal cleanliness",
+        "How can I keep myself clean",
+        "What are good hygiene habits",
+        "Why is dental hygiene important",
+        "Explain the importance of hygiene"
+      ]
+    },
+    {
+      "tag": "digestion",
+      "patterns": [
+        "What is digestion",
+        "How does digestion work",
+        "Tell me about digestive health",
+        "What is a healthy digestive system",
+        "Why is dietary fibre important",
+        "What foods support digestion",
+        "Explain the digestive system",
+        "How can I maintain digestive health"
+      ]
+    },
+    {
+      "tag": "allergies",
+      "patterns": [
+        "What is an allergy",
+        "Tell me about allergies",
+        "What causes allergic reactions",
+        "What are common allergy symptoms",
+        "Explain seasonal allergies",
+        "Why do people have allergies",
+        "What is an allergic reaction",
+        "When should an allergy be checked"
+      ]
+    },
+    {
+      "tag": "mental_wellness",
+      "patterns": [
+        "What is mental wellbeing",
+        "How can I maintain mental wellness",
+        "Why is mental health important",
+        "Tell me about emotional wellbeing",
+        "How can I look after my mental health",
+        "What are healthy mental wellness habits",
+        "Explain mental wellbeing",
+        "How can I take care of my emotions"
+      ]
+    },
+    {
+      "tag": "first_aid",
+      "patterns": [
+        "What is first aid",
+        "Tell me about basic first aid",
+        "What is the purpose of first aid",
+        "Why is first aid important",
+        "Explain basic first aid information",
+        "What should I know about first aid",
+        "What is emergency first aid",
+        "Tell me about first aid awareness"
+      ]
+    },
+    {
+      "tag": "doctor_consultation",
+      "patterns": [
+        "When should I consult a doctor",
+        "When should I visit a hospital",
+        "Why is medical consultation important",
+        "When do I need professional medical advice",
+        "How can I prepare for a doctor visit",
+        "Should I seek medical advice",
+        "When should symptoms be checked",
+        "Why should I have regular health checkups"
+      ]
+    },
+    {
+      "tag": "emergency",
+      "patterns": [
+        "I need urgent medical help",
+        "This is a medical emergency",
+        "Someone needs immediate medical attention",
+        "I need emergency assistance",
+        "Where can I get emergency medical help",
+        "Please help me find emergency services",
+        "I think someone needs an ambulance",
+        "What should I do in a medical emergency"
+      ]
+    }
+  ]
+}
