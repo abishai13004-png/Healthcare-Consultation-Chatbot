@@ -1,311 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Healthcare AI chatbot providing general healthcare and wellness information.">
-
-    <title>HealthCare AI - Healthcare Consultation Chatbot</title>
-
-    <!-- CSS FILE -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Healthcare AI chatbot providing general educational health and wellness information.">
+  <meta name="theme-color" content="#f5faf9">
+  <title>CareBridge AI | Healthcare Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
-
-    <!-- =====================================
-         MAIN APPLICATION
-    ====================================== -->
-
-    <div class="app-container">
-
-
-        <!-- =====================================
-             HEADER
-        ====================================== -->
-
-        <header class="header">
-
-            <div class="brand">
-
-                <div class="logo">✚</div>
-
-                <div>
-
-                    <h1>HealthCare AI</h1>
-
-                    <p>
-                        Your Personal Health Information Assistant
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="header-status">
-
-                <span class="status-dot"></span>
-
-                <span>Assistant Available</span>
-
-            </div>
-
-        </header>
-
-
-        <!-- =====================================
-             MAIN CHAT CONTAINER
-        ====================================== -->
-
-        <main class="chat-container">
-
-
-            <!-- =====================================
-                 WELCOME SECTION
-            ====================================== -->
-
-            <section class="welcome-section">
-
-                <div class="welcome-icon">✚</div>
-
-                <h2>Hello! Welcome to HealthCare AI</h2>
-
-                <p>
-
-                    I am your healthcare information assistant.
-
-                    Ask me general questions about health,
-                    nutrition, fitness and wellness.
-
-                </p>
-
-            </section>
-
-
-            <!-- =====================================
-                 QUICK QUESTIONS
-            ====================================== -->
-
-            <section class="quick-section">
-
-                <h3>How can I help you today?</h3>
-
-                <div class="quick-buttons">
-
-                    <button
-                        class="quick-btn"
-                        type="button"
-                        data-question="What is a balanced diet?">
-
-                        🥗 Balanced Diet
-
-                    </button>
-
-
-                    <button
-                        class="quick-btn"
-                        type="button"
-                        data-question="Why is sleep important?">
-
-                        😴 Healthy Sleep
-
-                    </button>
-
-
-                    <button
-                        class="quick-btn"
-                        type="button"
-                        data-question="Why is exercise important?">
-
-                        🏃 Exercise
-
-                    </button>
-
-
-                    <button
-                        class="quick-btn"
-                        type="button"
-                        data-question="How can I manage stress?">
-
-                        🧘 Stress Management
-
-                    </button>
-
-
-                    <button
-                        class="quick-btn"
-                        type="button"
-                        data-question="How can I maintain good hygiene?">
-
-                        🧼 Personal Hygiene
-
-                    </button>
-
-
-                    <button
-                        class="quick-btn"
-                        type="button"
-                        data-question="When should I consult a doctor?">
-
-                        🩺 Doctor Consultation
-
-                    </button>
-
-                </div>
-
-            </section>
-
-
-            <!-- =====================================
-                 CHAT MESSAGES
-            ====================================== -->
-
-            <section
-                class="chat-box"
-                id="chatBox"
-                aria-live="polite"
-                aria-label="Chat conversation">
-
-
-                <!-- INITIAL BOT MESSAGE -->
-
-                <div class="message bot-message">
-
-                    <div class="avatar">✚</div>
-
-                    <div class="message-content">
-
-                        <span class="sender">
-                            HealthCare AI
-                        </span>
-
-                        <div class="bubble">
-
-                            Hello! Welcome to HealthCare AI.
-
-                            You can ask me general healthcare
-                            and wellness questions.
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MESSAGES WILL BE ADDED BY JAVASCRIPT -->
-
-            </section>
-
-
-            <!-- =====================================
-                 TYPING INDICATOR
-            ====================================== -->
-
-            <div
-                class="typing-indicator"
-                id="typingIndicator"
-                hidden>
-
-                <span></span>
-
-                <span></span>
-
-                <span></span>
-
-                <small>
-                    HealthCare AI is typing...
-                </small>
-
-            </div>
-
-
-            <!-- =====================================
-                 INPUT SECTION
-            ====================================== -->
-
-            <section class="input-section">
-
-                <form id="chatForm">
-
-                    <input
-                        type="text"
-                        id="userInput"
-                        name="message"
-                        placeholder="Type your health-related question..."
-                        autocomplete="off"
-                        maxlength="1000"
-                        aria-label="Enter your healthcare question"
-                        required
-                    >
-
-                    <button
-                        type="submit"
-                        id="sendButton">
-
-                        Send ➤
-
-                    </button>
-
-                </form>
-
-
-                <!-- CLEAR CHAT BUTTON -->
-
-                <button
-                    id="clearChat"
-                    class="clear-button"
-                    type="button">
-
-                    🗑 Clear Conversation
-
-                </button>
-
-            </section>
-
-
-            <!-- =====================================
-                 MEDICAL DISCLAIMER
-            ====================================== -->
-
-            <footer class="disclaimer">
-
-                <strong>Medical Disclaimer:</strong>
-
-                This chatbot provides general educational
-                health information only.
-
-                It does not provide medical diagnosis or
-                treatment and cannot replace a qualified
-                healthcare professional.
-
-                For emergencies, contact emergency services
-                immediately.
-
-            </footer>
-
-
-        </main>
-
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/" aria-label="CareBridge AI home">
+      <span class="brand-mark">✚</span>
+      <span><strong>CareBridge<span> AI</span></strong><small>HEALTHCARE ASSISTANT</small></span>
+    </a>
+    <button class="new-chat-btn" id="newChat" type="button"><span>＋</span> New conversation</button>
+    <div class="side-label">WORKSPACE</div>
+    <button class="side-link active" type="button" id="homeLink"><span class="side-icon">⌂</span> Chat assistant</button>
+    <div class="history-heading"><span class="side-label">RECENT QUESTIONS</span><span class="history-count" id="historyCount">0</span></div>
+    <nav class="history-list" id="historyList" aria-label="Recent questions">
+      <p class="history-empty">Your recent questions will appear here.</p>
+    </nav>
+    <div class="sidebar-spacer"></div>
+    <div class="sidebar-help">
+      <div class="help-icon">?</div>
+      <strong>Need medical help?</strong>
+      <p>This assistant shares general information, not a diagnosis.</p>
     </div>
+    <div class="profile-row"><div class="profile-avatar">✚</div><div><strong>Healthcare assistant</strong><small>Educational support</small></div><span class="online-dot"></span></div>
+  </aside>
 
+  <main class="main-panel">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuToggle" aria-label="Toggle menu" type="button">☰</button>
+      <div><div class="eyebrow">YOUR WELLNESS COMPANION</div><h1>Healthcare chat</h1></div>
+      <div class="topbar-right"><span class="secure-label"><span class="secure-dot"></span> Assistant ready</span><button class="clear-top" id="clearChat" type="button" title="Delete saved conversation history">Clear history</button></div>
+    </header>
 
-    <!-- =====================================
-         JAVASCRIPT FILE
-    ====================================== -->
+    <section class="content-area">
+      <div class="welcome-block" id="welcomeBlock">
+        <div class="welcome-symbol"><span>✚</span><i></i></div>
+        <div class="welcome-kicker">A LITTLE SUPPORT, A HEALTHIER YOU</div>
+        <h2>How can I help you<br><em>feel your best?</em></h2>
+        <p>Ask a general question about health, nutrition, sleep or wellbeing. I’m here to help you find clear, easy-to-understand information.</p>
+      </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+      <section class="suggestions" id="suggestions">
+        <div class="section-heading"><div><span class="eyebrow">EXPLORE TOPICS</span><h3>What would you like to know?</h3></div><span class="suggestion-note">Choose a topic to get started</span></div>
+        <div class="suggestion-grid">
+          <button class="suggestion-card" type="button" data-question="What is a balanced diet?"><span class="topic-icon mint">♧</span><span><strong>Nutrition</strong><small>Balanced diet & healthy eating</small></span><b>↗</b></button>
+          <button class="suggestion-card" type="button" data-question="Why is sleep important?"><span class="topic-icon lavender">☾</span><span><strong>Better sleep</strong><small>Rest, routine & sleep health</small></span><b>↗</b></button>
+          <button class="suggestion-card" type="button" data-question="Why is exercise important?"><span class="topic-icon peach">↗</span><span><strong>Fitness</strong><small>Movement & daily activity</small></span><b>↗</b></button>
+          <button class="suggestion-card" type="button" data-question="How can I manage stress?"><span class="topic-icon blue">♡</span><span><strong>Mental wellness</strong><small>Stress & emotional wellbeing</small></span><b>↗</b></button>
+        </div>
+      </section>
 
+      <section class="conversation-panel" aria-label="Chat conversation">
+        <div class="conversation-top"><div><span class="assistant-avatar">✚</span><span><strong>CareBridge AI</strong><small><span class="online-dot"></span> General health information</small></span></div><span class="encrypted-label">● Private session</span></div>
+        <div class="chat-box" id="chatBox" aria-live="polite" aria-label="Chat messages">
+          <div class="message bot-message"><div class="message-avatar">✚</div><div class="message-content"><span class="sender">CareBridge AI <time>Just now</time></span><div class="bubble">Hello! Welcome. You can ask me general questions about healthcare, nutrition, fitness and wellness. What would you like to know today?</div></div></div>
+        </div>
+        <div class="typing-indicator" id="typingIndicator" hidden><span></span><span></span><span></span><small>CareBridge AI is preparing a response…</small></div>
+        <div class="composer-wrap">
+          <form id="chatForm" class="composer">
+            <span class="composer-plus">＋</span>
+            <input type="text" id="userInput" name="message" placeholder="Ask a health or wellness question…" autocomplete="off" maxlength="1000" aria-label="Enter your healthcare question" required>
+            <button type="submit" id="sendButton" aria-label="Send message">➤</button>
+          </form>
+          <div class="composer-foot"><span>Press <kbd>Enter</kbd> to send</span><span>CareBridge AI can make mistakes. Verify important information.</span></div>
+        </div>
+      </section>
+      <footer class="disclaimer"><span class="disclaimer-icon">ⓘ</span><p><strong>Important:</strong> This chatbot provides general educational information only. It does not diagnose conditions or replace a qualified healthcare professional. For a medical emergency in India, call <strong>112</strong> or seek urgent medical care.</p></footer>
+    </section>
+    <footer class="page-footer">Made for accessible health education <span>•</span> Not a substitute for professional medical advice</footer>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-
 </html>
